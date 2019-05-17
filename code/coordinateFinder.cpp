@@ -122,8 +122,8 @@ void trackMouseInputs(std::ostream &print) {
 		} else if(currentPoint.x != previusPoint.x ||
 				  currentPoint.y != previusPoint.y) {
 
-			print << previusPoint.x - currentPoint.x << ' '
-				  << previusPoint.y - currentPoint.y << ' '
+			print << currentPoint.x - previusPoint.x << ' '
+				  << currentPoint.y - previusPoint.y << ' '
                   << '\n';
 
 		} else if( mouseEvent.rightClick() ) {
