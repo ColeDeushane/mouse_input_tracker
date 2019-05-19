@@ -15,11 +15,18 @@ int main() {
 
     bool running = true;
     KeyBoard keyEvent;
+    int num = 0;
 
     std::ofstream file;
-    file.open("DATA.txt");
+    file.open("xData.txt");
 
     if(!file)
+        return -1;
+
+    std::ofstream file2;
+    file2.open("yData.txt");
+
+    if(!file2)
         return -1;
 
     SetConsoleTitle("Mouse Tracker");
@@ -38,8 +45,13 @@ int main() {
         }
     }
 
-    trackMouseInputs(file);
+    trackMouseInputs(file, file2, num);
+
+    std::cout << "index: " << num << std::endl;
+
+    std::cin >> num;
 
     file.close();
+    file2.close();
     return 0;
 }

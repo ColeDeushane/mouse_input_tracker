@@ -11,6 +11,6 @@
 void findCoord(std::ostream&);
 
 // function used to track mouse motion and other input events
-void trackMouseInputs(std::ostream&);
+void trackMouseInputs(std::ostream&, std::ostream&, int&);
 
 #endif //COORDINATEFINDER_H

@@ -91,7 +91,7 @@ void findCoord(std::ostream &print) {
 //=============================================================================
 //=============================================================================
 
-void trackMouseInputs(std::ostream &print) {
+void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
 
 	POINT currentPoint, previusPoint;	// used to determine mouse movements
 
@@ -104,6 +104,7 @@ void trackMouseInputs(std::ostream &print) {
 	bool running = true;    	// used to hold an infinite loop
 	bool firstIteration = true;	// used to control the first iteration
 	int count = 0;				// used to count clicks or key presses
+    //int index = 0;              // used to track the amount of numbers printed
 
 	while(running) {
 
@@ -116,86 +117,130 @@ void trackMouseInputs(std::ostream &print) {
 
 		if(firstIteration) {
 
-			print << currentPoint.x << ' ' << currentPoint.y << ' ' << '\n';
+            xPrint << currentPoint.x << ", ";
+            yPrint << currentPoint.y << ", ";
+
+			//print << currentPoint.x << ' ' << currentPoint.y << ' ' << '\n';
 			firstIteration = false;
+            index++;
 
 		} else if(currentPoint.x != previusPoint.x ||
 				  currentPoint.y != previusPoint.y) {
 
-			print << currentPoint.x - previusPoint.x << ' '
-				  << currentPoint.y - previusPoint.y << ' '
-                  << '\n';
+            xPrint << currentPoint.x - previusPoint.x << ", ";
+            yPrint << currentPoint.y - previusPoint.y << ", ";
+            index++;
+
+			//print << currentPoint.x - previusPoint.x << ' '
+			//	  << currentPoint.y - previusPoint.y << ' '
+            //      << '\n';
 
 		} else if( mouseEvent.rightClick() ) {
 
-			print << "4998 " << ++count << ' '
-            << '\n';
+            xPrint << "4998, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "4998 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if( mouseEvent.leftClick() ) {
 
-			print << "4999 " << ++count << ' '
-            << '\n';
+            xPrint << "4999, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "4999 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.zero() ) {
 
-			print << "5000 " << ++count << ' '
-            << '\n';
+            xPrint << "5000, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5000 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.one() ) {
 
-			print << "5001 " << ++count << ' '
-            << '\n';
+            xPrint << "5001, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5001 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.two() ) {
 
-			print << "5002 " << ++count << ' '
-            << '\n';
+            xPrint << "5002, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5002 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.three() ) {
 
-			print << "5003 " << ++count << ' '
-            << '\n';
+            xPrint << "5003, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5003 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.four() ) {
 
-			print << "5004 " << ++count << ' '
-            << '\n';
+            xPrint << "5004, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5004 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.five() ) {
 
-			print << "5005 " << ++count << ' '
-            << "* ";
+            xPrint << "5005, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5005 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.six() ) {
 
-			print << "5006 " << ++count << ' '
-            << '\n';
+            xPrint << "5006, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5006 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.seven() ) {
 
-			print << "5007 " << ++count << ' '
-            << '\n';
+            xPrint << "5007, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5007 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.eight() ) {
 
-			print << "5008 " << ++count << ' '
-            << '\n';
+            xPrint << "5008, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5008 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.nine() ) {
 
-			print << "5009 " << ++count << ' '
-            << '\n';
+            xPrint << "5009, ";
+            yPrint << ++count << ", ";
+            index++;
+			//print << "5009 " << ++count << ' '
+            //<< '\n';
 			Sleep(200);
 
 		} else if( keyEvent.escape() ) {
