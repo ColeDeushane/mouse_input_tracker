@@ -1,7 +1,7 @@
 /*
  * Author: Cole Deushane
  * Date Created: 8 April 2019
- * Date Last Modified: 16 May 2019
+ * Date Last Modified: 19 May 2019
 */
 
 #include <iostream>
@@ -13,9 +13,11 @@
 
 int main() {
 
+    SetConsoleTitle("Mouse Tracker");
+
     bool running = true;
     KeyBoard keyEvent;
-    int num = 0;
+    int index = 0;
 
     std::ofstream file;
     file.open("xData.txt");
@@ -28,8 +30,6 @@ int main() {
 
     if(!file2)
         return -1;
-
-    SetConsoleTitle("Mouse Tracker");
 
     std::cout << std::string(50, '-') << std::endl
          << "Mouse Tracker\n"
@@ -45,11 +45,11 @@ int main() {
         }
     }
 
-    trackMouseInputs(file, file2, num);
+    trackMouseInputs(file, file2, index);
 
-    std::cout << "index: " << num << std::endl;
+    std::cout << "index: " << index << std::endl;
 
-    std::cin >> num;
+    std::cin >> index;  // used to pause program at the end
 
     file.close();
     file2.close();

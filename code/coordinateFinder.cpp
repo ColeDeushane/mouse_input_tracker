@@ -1,7 +1,7 @@
 /*
  * Author: Cole Deushane
  * Date Created: 8 April 2019
- * Date Last Modified: 16 May 2019
+ * Date Last Modified: 19 May 2019
 */
 
 #include <iostream>
@@ -104,7 +104,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
 	bool running = true;    	// used to hold an infinite loop
 	bool firstIteration = true;	// used to control the first iteration
 	int count = 0;				// used to count clicks or key presses
-    //int index = 0;              // used to track the amount of numbers printed
 
 	while(running) {
 
@@ -120,7 +119,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << currentPoint.x << ", ";
             yPrint << currentPoint.y << ", ";
 
-			//print << currentPoint.x << ' ' << currentPoint.y << ' ' << '\n';
 			firstIteration = false;
             index++;
 
@@ -131,17 +129,11 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             yPrint << currentPoint.y - previusPoint.y << ", ";
             index++;
 
-			//print << currentPoint.x - previusPoint.x << ' '
-			//	  << currentPoint.y - previusPoint.y << ' '
-            //      << '\n';
-
 		} else if( mouseEvent.rightClick() ) {
 
             xPrint << "4998, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "4998 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if( mouseEvent.leftClick() ) {
@@ -149,8 +141,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "4999, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "4999 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.zero() ) {
@@ -158,8 +148,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5000, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5000 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.one() ) {
@@ -167,8 +155,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5001, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5001 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.two() ) {
@@ -176,8 +162,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5002, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5002 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.three() ) {
@@ -185,8 +169,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5003, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5003 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.four() ) {
@@ -194,8 +176,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5004, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5004 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.five() ) {
@@ -203,8 +183,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5005, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5005 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.six() ) {
@@ -212,8 +190,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5006, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5006 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.seven() ) {
@@ -221,8 +197,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5007, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5007 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.eight() ) {
@@ -230,8 +204,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5008, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5008 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if ( keyEvent.nine() ) {
@@ -239,8 +211,6 @@ void trackMouseInputs(std::ostream &xPrint, std::ostream &yPrint, int &index) {
             xPrint << "5009, ";
             yPrint << ++count << ", ";
             index++;
-			//print << "5009 " << ++count << ' '
-            //<< '\n';
 			Sleep(200);
 
 		} else if( keyEvent.escape() ) {
